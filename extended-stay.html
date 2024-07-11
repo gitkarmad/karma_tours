@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extended Stay - Karma Tours</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="My Website Logo"> <!-- Replace with your logo image -->
+        </div>
+        <nav class="primary-navigation">
+            <ul id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="accommodation.html">Accommodation</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+            </ul>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="accommodation">
+            <h2>Extended Stay</h2>
+            <p>Stay longer and enjoy more with our extended stay options.</p>
+            <ul class="accommodation-list">
+                <!-- Add extended stay details here with images -->
+                <li>
+                    <img src="images/dewachen.jpeg" alt="Extended Stay 1 Image">
+                    <div>
+                        <h3>Dewachen Hotel & Spa</h3>
+                        <p>Dewachen Hotel & Spa in Phobjikha Valley offers comfortable rooms with traditional decor, a spa, and a restaurant. It's ideal for extended stays with access to nature trails and Gangtey Monastery.</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/ose.jpg" alt="Extended Stay 2 Image">
+                    <div>
+                        <h3>Osel Thimphu Bhutan</h3>
+                        <p>Osel Thimphu Bhutan offers spacious suites, a fitness center, and a restaurant. Located in central Thimphu, it's perfect for exploring the city's markets, museums, and monasteries.</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <ul>
+                    <li>Email: karmaTours@gmail.com</li>
+                    <li>Phone: +1234567890</li>
+                    <li>Address: 123 Street, PERTH WA, AUSTRALIA</li>
+                </ul>
+            </div>
+            <div class="social-media">
+                <h3>Social Media Links</h3>
+                <nav class="footer-navigation">
+                    <ul>
+                        <li><a href="https://www.facebook.com">Facebook</a></li>
+                        <li><a href="https://www.tiktok.com">TikTok</a></li>
+                        <li><a href="https://www.instagram.com">Instagram</a></li>
+                    </ul>
+                </nav>
+               
+            </div>
+            <div class="quick-links">
+                <h3>Quick Links</h3>
+                <nav class="footer-navigation">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="booking.html">Booking</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+                
+            </div>
+        </div>
+        <p>&copy; 2024 Karma Tours. All rights reserved.</p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,661 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styling */
+header {
+    background-color: #fff;
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo img {
+    height: 70px; /* Adjust logo height */
+    width: auto; /* Maintain aspect ratio */
+    animation: rotateLogo 10s linear infinite;
+}
+
+@keyframes rotateLogo {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.primary-navigation ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+.primary-navigation ul li {
+    margin-left: 20px;
+}
+
+.primary-navigation ul li a {
+    text-decoration: none;
+    color: #1f1cda;
+    font-size: 1.2rem; /* Increase font size for better readability */
+    transition: color 0.3s;
+}
+
+.primary-navigation ul li a:hover {
+    color: #007bff; /* Hover color */
+}
+
+.primary-navigation .menu-icon {
+    display: none; /* Hidden by default */
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .primary-navigation ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .primary-navigation ul.active {
+        display: flex;
+    }
+
+    .primary-navigation ul li {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 10px 0;
+    }
+
+    .primary-navigation ul li a {
+        color: #333; /* Default color for mobile links */
+    }
+
+    .primary-navigation .menu-icon {
+        display: block;
+    }
+}
+
+/* Banner styling */
+.banner {
+    background-size: cover;
+    background-position: center;
+    height: 500px; /* Adjust height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Hide overflowing content */
+}
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 100%); /* Gradient overlay */
+}
+.banner-content {
+    max-width: 800px;
+    position: relative;
+    z-index: 1;
+    text-align: center; /* Center align text */
+}
+.banner-content h1 {
+    font-size: 3.5rem;
+    color: #00BF63;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Text shadow for depth */
+}
+.banner-content h2 {
+    font-size: 2.5rem;
+    color: #F7AC08;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Text shadow for depth */
+}
+.banner-content p {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+.banner-content .btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #007bff; /* Button background color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+}
+.banner-content .btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+/* Main content */
+main {
+    background-color: #fff; /* White background for main content */
+    padding: 20px;
+    margin-top: 100px; /* Ensure content is below header */
+}
+h1, h2 {
+    color: #4268e3;
+    text-align: center;
+    font-size: 2rem;
+}
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 40px auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+/* Gallery item styles  */
+.gallery {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.image-container {
+    min-width: 100%;
+    transition: transform 0.5s ease;
+}
+.image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+/* Next & previous buttons */
+.prev-img, .next-img {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.next-img {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev-img:hover, .next-img:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+/* About us Page */
+#about-us {
+    background-color: #f8f8f8; /* Light background color */
+}
+#about-us h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+#about-us p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center; /* Center align text */  
+}
+#about-text {
+    max-height: 100px; /* Show only the first 100px of text */
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+#toggle-button {
+    display: block;
+    margin: 10px auto;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+#toggle-button:hover {
+    background-color: #0056b3;
+}
+#about-content.expanded #about-text {
+    max-height: none; /* Show full text when expanded */
+}
+/* About-us page -> Content Section Styles */
+.content-section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+.content-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+.content-section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Reviews Styles */
+.reviews {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.review {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: calc(50% - 40px);
+}
+.review i {
+    font-size: 2rem;
+    color: #F7AC08;
+    margin-bottom: 10px;
+}
+.choose-us {
+    max-width: auto; /* Adjust max width of content */
+    margin: 0 auto; /* Center align content */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 40px);
+}
+/* Locations Styles */
+.locations {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.location {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: calc(50% - 40px);
+    text-align: center;
+}
+
+.location i {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.location .social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.location .social-icon {
+    font-size: 1.5rem;
+    margin: 0 10px;
+    color: #007bff;
+    transition: color 0.3s;
+}
+
+.location .social-icon:hover {
+    color: #0056b3;
+}
+
+/* Partners section */
+
+div.gallery {
+    border: 1px solid #ccc;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  div.gallery:hover {
+    border: 1px solid #777;
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: 200px; /* Set the desired height */
+    object-fit: cover; /* Ensures the image covers the container while maintaining aspect ratio */
+    display: block;
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+  }
+  
+  @media only screen and (max-width: 700px) {
+    .responsive {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .responsive {
+      width: 100%;
+    }
+}
+
+/* Booking Page */
+/* General styles for the booking form */
+.booking-form-section {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.booking-form-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.booking-form-section form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.booking-form-section form input[type="text"],
+.booking-form-section form input[type="email"],
+.booking-form-section form input[type="tel"],
+.booking-form-section form input[type="date"],
+.booking-form-section form select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.booking-form-section form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.booking-form-section form button:hover {
+    background-color: #0056b3;
+}
+
+.additional-fields {
+    display: none;
+}
+/* Accommodation Section */
+.accommodation {
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.accommodation h2 {
+    margin-bottom: 10px;
+}
+
+.accommodation p {
+    margin-bottom: 20px;
+}
+
+.accommodation-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.accommodation-list li {
+    flex: 1 1 calc(20% - 40px); /* Use flexbox for flexible width */
+    margin: 10px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for animation */
+}
+
+.accommodation-list li:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+.accommodation-list img {
+    width: 80%;
+    height: auto; /* Maintain aspect ratio */
+    max-height: 150px; /* Fixed height for all images */
+    object-fit: cover; /* Ensure image covers the set dimensions without distortion */
+    border-radius: 6px;
+    transition: transform 0.4s ease; /* Add transition for animation */
+}
+
+.accommodation-list h3 {
+    margin: 10px 0 5px;
+}
+
+.accommodation-list p {
+    margin: 5px 0;
+}
+
+.accommodation-list a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+/* contact Page */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+form input, form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+form button {
+    padding: 10px;
+    border: none;
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background-color: #1c6b2c;
+}
+
+/* SERVICES PAGE */
+/* Services Page */
+#services ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 4rem;
+}
+
+#services li {
+    text-align: center;
+    transition: transform 0.3s ease; /* Add transition for smooth animation */
+}
+
+#services li:hover {
+    transform: scale(1.1); /* Scale up the image on hover */
+}
+
+#services li img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s ease; /* Add transition for smooth animation */
+}
+
+#services li:hover img {
+    transform: scale(1.1); /* Scale up the image on hover */
+}
+
+/* for introduction section  */
+#introduction {
+    background-color: #f9f9f9;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+#introduction h2 {
+    margin-top: 0;
+}
+
+/* footer for all the pages  */
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    width: 100%;
+    margin-top: auto;
+    position: relative;
+}
+
+/* Footer Styles */
+footer {
+    padding: 20px 0;  /* Decrease padding to reduce size */
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-container > div {
+    flex: 1 1 250px; /* Adjust width of each section */
+    margin: 10px;
+}
+
+.footer-container h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.footer-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-container ul li {
+    margin-bottom: 5px;
+}
+
+.footer-container ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-container ul li a:hover {
+    color: #ddd;
+}
+
+.footer-navigation ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-navigation ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-navigation ul li a:hover {
+     color: rgb(92, 232, 127);
+}

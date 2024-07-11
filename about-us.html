@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Karma Tours</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Karma Tours Logo"> <!-- Replace with your logo image -->
+        </div>
+        <nav class="primary-navigation">
+            <ul id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="accommodation.html">Accommodation</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+            </ul>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Banner section -->
+        <section class="banner" style="background-image: url('images/banner.png');">
+            <div class="banner-content">
+                <h1>KARMA TOURS</h1>
+                <h2>Start Your Journey With Us</h2>
+                <p>Visit us today to see amazing deals on a number of destinations</p>
+                <a href="#about-us" class="btn">View More</a>
+            </div>
+        </section>
+        <section id="about-us" class="content-section">
+            <h2>Mission and Vision</h2>
+            <p>Our mission is to provide exceptional travel experiences while promoting sustainable tourism. Our vision is to be the leading provider of responsible and meaningful travel experiences worldwide.</p>
+            
+            <h2>Company History</h2>
+            <p>Founded in 2010, Karma Tours has grown from a small travel agency to a global leader in the tourism industry, offering a wide range of tours and experiences across the globe.</p>
+            
+            <h2>Client Reviews</h2>
+            <div class="reviews">
+                <div class="review">
+                    <i class="fas fa-user-circle"></i>
+                    <p>"Karma Tours provided an unforgettable experience. Highly recommend!" - Mrs. Kim</p>
+                </div>
+                <div class="review">
+                    <i class="fas fa-user-circle"></i>
+                    <p>"Exceptional service and wonderful destinations." - Mr. James</p>
+                </div>
+            </div>
+            
+            <h2>Why Choose Us</h2>
+            <div class="choose-us">
+                <p>We are committed to responsible tourism, working closely with local communities to ensure a positive impact. We offer unique and meaningful travel experiences tailored to your preferences.</p>
+            </div>
+
+            <h2>Office Locations</h2>
+            <div id="office-locations" class="locations">
+                <div class="location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Thimphu Office: Norzin Lam, Thimphu</p>
+                    <a href="https://wa.me/1234567890" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/karma.tours" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="tel:+97517777777" class="social-icon"><i class="fas fa-phone"></i></a>
+                </div>
+                <div class="location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Perth Office: 123456 Street, WA</p>
+                    <a href="https://wa.me/1234567890" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/karma.tours" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="tel:+1234567890" class="social-icon"><i class="fas fa-phone"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <ul>
+                    <li>Email: karmaTours@gmail.com</li>
+                    <li>Phone: +1234567890</li>
+                    <li>Address: 123 Street, Perth WA, Australia</li>
+                </ul>
+            </div>
+            <div class="social-media">
+                <h3>Social Media Links</h3>
+                <nav class="footer-navigation">
+                    <ul>
+                        <li><a href="https://www.facebook.com">Facebook</a></li>
+                        <li><a href="https://www.tiktok.com">TikTok</a></li>
+                        <li><a href="https://www.instagram.com">Instagram</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="quick-links">
+                <h3>Quick Links</h3>
+                <nav class="footer-navigation">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="booking.html">Booking</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <p>&copy; 2024 Karma Tours. All rights reserved.</p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotels - Karma Tours</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="My Website Logo"> <!-- Replace with your logo image -->
+        </div>
+        <nav class="primary-navigation">
+            <ul id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="accommodation.html">Accommodation</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+            </ul>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="accommodation">
+            <h2>Hotels</h2>
+            <p>Explore our selection of hotels, offering luxury and comfort for your stay.</p>
+            <ul class="accommodation-list">
+                <!-- Add hotel details here with images -->
+                <li>
+                    <img src="images/amankora.jpg" alt="Hotel 1 Image">
+                    <div>
+                        <h3>Amankora Thimphu Lodge</h3>
+                        <p>Amankora Thimphu Lodge offers a serene retreat in the forests of Thimphu Valley. With 16 suites featuring wood-panelled interiors, a spa, traditional hot stone bath, and a restaurant, it blends Bhutanese architecture with modern luxury. It's an ideal base for exploring Thimphu's cultural landmarks.</p>
+                    </div>
+                </li>
+                
+                <li>
+                    <img src="images/taj.jpg" alt="Hotel 2 Image">
+                    <div>
+                        <h3>Taj Tashi Bhutan</h3>
+                        <p>Taj Tashi Bhutan, located in Thimphu's heart, combines Bhutanese heritage with modern comforts. The hotel has 66 rooms adorned with traditional motifs, multiple dining options, a spa, and an indoor pool. Its central location is perfect for exploring Thimphu's markets, monasteries, and cultural sites.</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main> 
+    <footer>
+        <div class="footer-container">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <ul>
+                    <li>Email: karmaTours@gmail.com</li>
+                    <li>Phone: +1234567890</li>
+                    <li>Address: 123 Street, PERTH WA, AUSTRALIA</li>
+                </ul>
+            </div>
+            <div class="social-media">
+                <h3>Social Media Links</h3>
+                <nav class="footer-navigation">
+                    <ul>
+                        <li><a href="https://www.facebook.com">Facebook</a></li>
+                        <li><a href="https://www.tiktok.com">TikTok</a></li>
+                        <li><a href="https://www.instagram.com">Instagram</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="quick-links">
+                <h3>Quick Links</h3>
+                <nav class="footer-navigation">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="booking.html">Booking</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <p>&copy; 2024 Karma Tours. All rights reserved.</p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

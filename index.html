@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="js/formSwitcher.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="My Website Logo"> <!-- Replace with your logo image -->
+        </div>
+        <nav class="primary-navigation">
+            <ul id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="accommodation.html">Accommodation</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+            </ul>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Banner section -->
+        <section class="banner" style="background-image: url('images/bg.jpeg');">
+            <div class="banner-content">
+                <h1>KARMA TOURS</h1>
+                <h2>Start Your Journey With Us </h2>
+                <p>Visit us today to see amazing deals on a number of destinations</p>
+                <a href="#about-us" class="btn">ABOUT US</a>
+            </div>
+        </section>
+        <!-- Gallery Slideshow section -->
+        <!-- Partners -->
+        <section class="content-section">
+            <h2>Partners</h2>  
+            <section class="slideshow-container">
+                <div class="responsive">
+                    <div class="gallery">
+                        <a href="booking.html?type=hotel">
+                            <img src="images/partners/resturant.jpg" alt="partners">
+                        </a>
+                        <div class="desc">Karma HOTEL </div>
+                    </div>
+                </div>
+                <div class="responsive">
+                    <div class="gallery">
+                        <a href="booking.html?type=resort1">
+                            <img src="images/partners/res.jpeg" alt="partners">
+                        </a>
+                        <div class="desc">village resturant</div>
+                    </div>
+                </div>
+                <div class="responsive">
+                    <div class="gallery">
+                        <a href="booking.html?type=resort2">
+                            <img src="images/partners/resort.webp" alt="partners">
+                        </a>
+                        <div class="desc">Karma Resort 1</div>
+                    </div>
+                </div>
+                <div class="responsive">
+                    <div class="gallery">
+                        <a href="booking.html?type=resort2">
+                            <img src="images/partners/tour.jpeg" alt="partners">
+                        </a>
+                        <div class="desc">Karma Travel Agent</div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <!-- About Us section -->
+        <section id="about-us">
+            <h2>About Us</h2>
+            <p>We are a leading travel consultancy offering top-notch services to help you explore the world.</p>
+            <div id="about-content">
+                <p id="about-text">
+                    Embark on a transformative journey with Karma Tours, where every step promises not just an adventure, 
+                    but an opportunity to shape the world around you. Founded on the principle of conscious travel,
+                    Karma Tours invites you to explore destinations while leaving a positive impact on communities and 
+                    environments alike. At Karma Tours, we believe that travel is more than just sightseeing; it's about 
+                    fostering connections, respecting cultures, and preserving nature. With this ethos at our core, we 
+                    curate experiences that blend adventure with purpose, ensuring that every moment spent with us is 
+                    meaningful. Our diverse range of tours spans the globe, from the bustling streets of Marrakech to 
+                    the serene landscapes of New Zealand. Whether you're seeking an adrenaline rush through jungle treks
+                    or a tranquil retreat in secluded villages, Karma Tours offers something for every kind of traveler. 
+                    But what truly sets us apart is our commitment to responsible tourism. We work closely with local 
+                    communities to ensure that our presence brings about positive change. From supporting sustainable 
+                    livelihoods to participating in conservation efforts, we strive to leave destinations better than 
+                    we found them. Join us on a journey where your wanderlust meets a higher purpose. Whether you're 
+                    volunteering at a wildlife sanctuary, immersing yourself in cultural exchanges, or simply savoring 
+                    the beauty of untouched landscapes, Karma Tours promises an experience that will enrich your soul 
+                    and leave a lasting legacy of kindness and compassion. Come, explore the world with intention, and 
+                    let Karma Tours be your guide to meaningful travel. Because every adventure has the power to change 
+                    lives – including yours.
+                </p>
+                <button id="toggle-button" onclick="toggleText()">Show More</button>
+            </div>
+        </section>   
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <ul>
+                    <li>Email: karmaTours@gmail.com</li>
+                    <li>Phone: +1234567890</li>
+                    <li>Address: 123 Street, PERTH WA, AUSTRALIA</li>
+                </ul>
+            </div>
+            <div class="social-media">
+                <h3>Social Media Links</h3>
+                <nav class="footer-navigation">
+                    <ul>
+                        <li><a href="https://www.facebook.com">Facebook</a></li>
+                        <li><a href="https://www.tiktok.com">TikTok</a></li>
+                        <li><a href="https://www.instagram.com">Instagram</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="quick-links">
+                <h3>Quick Links</h3>
+                <nav class="footer-navigation">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="booking.html">Booking</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <p>&copy; 2024 Karma Tours. All rights reserved.</p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+        function toggleText() {
+            const aboutText = document.getElementById('about-text');
+            const toggleButton = document.getElementById('toggle-button');
+            if (aboutText.style.maxHeight === '100px') {
+                aboutText.style.maxHeight = 'none';
+                toggleButton.textContent = 'Show Less';
+            } else {
+                aboutText.style.maxHeight = '100px';
+                toggleButton.textContent = 'Show More';
+            }
+        }
+    </script>
+</body>
+</html>
